@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAV Consultoria de Alimentos | Segurança e Qualidade</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Consultoria especializada em segurança e qualidade de alimentos. Regularização da ANVISA, treinamentos, rotulagem e auditorias para o seu negócio crescer com segurança.">
+  <meta name="keywords" content="consultoria de alimentos, anvisa, segurança alimentar, boas praticas, pop, auditoria alimentos, rotulagem nutricional">
+  <meta name="author" content="SAV Consultoria">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- Lucide Icons for clean SVG symbols -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- 1. INTERACTIVE PRELOADER -->
+  <div id="preloader" class="preloader">
+    <div class="loader-container">
+      <!-- Inline SVG from brand identity (marca d'agua icone 1.svg) for path drawing animation -->
+      <svg class="loader-svg" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+        <path class="shield-outline" d="M477.56,719.77l-17.83,16.93c-12.36-16.09-19.73-36.23-19.73-58.05,0-48.23,35.95-88.23,82.47-94.6v24.73c-32.99,6.13-58.05,35.13-58.05,69.86,0,15.31,4.87,29.52,13.14,41.13Z"/>
+        <path class="shield-outline" d="M576.03,765.33s-1.1.44-2.17.85l-1.62.63c-11.5,4.83-23.94,7.33-36.75,7.33-21.95,0-42.18-7.45-58.33-19.95l17.97-17.08c11.47,7.96,25.38,12.61,40.36,12.61,5.34,0,10.6-.59,15.72-1.75,3.54-.8,7.24.3,9.86,2.81l14.83,14.22.12.33Z"/>
+        <path class="shield-outline" d="M630.98,678.64c0,9-1.25,17.9-3.73,26.48q-.19.74-5.67,14.46l-.11-.05-13.92-13.53c-2.8-2.73-4-6.75-3-10.53,1.47-5.49,1.88-11.02,1.99-16.82,0-35.2-25.73-64.51-59.38-70.1v-24.68c47.16,5.78,83.82,46.08,83.82,94.78Z"/>
+        <path class="shield-outline shield-fill" d="M591.96,717.61c-5.93-5.77-8.23-14.42-5.65-22.28,1.73-5.25,2.66-10.86,2.66-16.68,0-25.49-17.92-46.86-41.81-52.2-3.76-.85-7.67-1.29-11.67-1.29-4.49,0-8.85.56-13.02,1.61-23.22,5.83-40.47,26.87-40.47,51.88,0,10.62,3.11,20.52,8.46,28.85,4.51,7.01,10.6,12.91,17.78,17.16,7.98,4.75,17.3,7.48,27.24,7.48,5.65,0,11.1-.88,16.22-2.51,7.55-2.41,15.82-.27,21.53,5.23l30.54,29.47h36.22l-48.04-46.71ZM535.49,707.7c-16.02,0-29.05-13.03-29.05-29.05s13.03-29.05,29.05-29.05,29.05,13.03,29.05,29.05-13.03,29.05-29.05,29.05Z"/>
+      </svg>
+      
+      <div id="loader-percent" class="loader-percentage">0%</div>
+      
+      <div class="loader-bar-bg">
+        <div id="loader-fill" class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING DECORATIVE BACKGROUND BLOBS -->
+  <div class="bg-blob-1"></div>
+  <div class="bg-blob-2"></div>
+
+  <!-- 2. NAVBAR SECTION -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo-link">
+        <!-- Relative reference to the multi-color brand logo -->
+        <img class="brand-logo-img" src="logo-color.svg" alt="SAV Consultoria Logo">
+      </a>
+      
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#diagnostico">Autodiagnóstico</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      
+      <div class="nav-action-btn">
+        <a href="#contato" class="btn btn-consult">Agendar Consultoria</a>
+      </div>
+      
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 3. HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-title">Segurança, Qualidade e <span class="highlight">Crescimento</span> para seu Negócio</h1>
+        <p class="hero-desc">Consultoria especializada em alimentos. Ajudamos empresas do ramo de alimentação a se regularizarem perante a ANVISA, organizarem processos e crescerem com segurança.</p>
+        
+        <div class="hero-actions">
+          <a href="#diagnostico" class="btn btn-primary">Comece Agora <i data-lucide="arrow-right"></i></a>
+          <a href="#servicos" class="btn btn-secondary">Saiba Mais</a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <!-- 3D Perspective Card featuring the brand's shield icon -->
+        <div id="hero-card" class="hero-card">
+          <img class="hero-shield-icon" src="logo-icon.svg" alt="SAV Shield Brand Icon">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. STATS SECTION -->
+  <section id="stats-section" class="stats-section">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <div class="stat-num" data-target="50" data-suffix="+">0+</div>
+        <div class="stat-label">Clientes atendidos e regularizados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="100" data-suffix="%">0%</div>
+        <div class="stat-label">De aprovação em auditorias sanitárias</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="1500" data-suffix="+">0+</div>
+        <div class="stat-label">Horas de treinamento ministradas</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. INTERACTIVE DIAGNOSTIC WIDGET (QUIZ) -->
+  <section id="diagnostico" class="quiz-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Autodiagnóstico</span>
+        <h2 class="section-title">Como está a conformidade sanitária do seu negócio?</h2>
+      </div>
+      
+      <div class="quiz-container">
+        <!-- Quiz progress bar -->
+        <div class="quiz-progress-bar">
+          <div id="quiz-progress-fill" class="quiz-progress-fill"></div>
+        </div>
+        
+        <div class="quiz-content">
+          <!-- Step 1 -->
+          <div class="quiz-step active" data-step-id="q1">
+            <div class="quiz-step-header">
+              <span class="quiz-step-count">Pergunta 1 de 4</span>
+            </div>
+            <h3 class="quiz-question">O seu estabelecimento possui um Manual de Boas Práticas e Procedimentos Operacionais Padronizados (POPs) atualizados e implantados?</h3>
+            <div class="quiz-options">
+              <label class="quiz-option-card" data-question="q1" data-value="sim">
+                <input type="radio" name="q1" value="sim">
+                <div class="quiz-option-title">Sim</div>
+                <div class="quiz-option-desc">Temos toda a documentação atualizada e a equipe segue as regras.</div>
+              </label>
+              <label class="quiz-option-card" data-question="q1" data-value="nao">
+                <input type="radio" name="q1" value="nao">
+                <div class="quiz-option-title">Não / Não sei</div>
+                <div class="quiz-option-desc">Não temos a documentação ou ela está desatualizada.</div>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="quiz-step" data-step-id="q2">
+            <div class="quiz-step-header">
+              <span class="quiz-step-count">Pergunta 2 de 4</span>
+            </div>
+            <h3 class="quiz-question">Toda a equipe de manipuladores de alimentos realizou o curso obrigatório de Boas Práticas com certificado válido?</h3>
+            <div class="quiz-options">
+              <label class="quiz-option-card" data-question="q2" data-value="sim">
+                <input type="radio" name="q2" value="sim">
+                <div class="quiz-option-title">Sim</div>
+                <div class="quiz-option-desc">100% da equipe operacional possui treinamento em dia.</div>
+              </label>
+              <label class="quiz-option-card" data-question="q2" data-value="nao">
+                <input type="radio" name="q2" value="nao">
+                <div class="quiz-option-title">Não / Parcialmente</div>
+                <div class="quiz-option-desc">Alguns funcionários novos não têm treinamento ou venceu o prazo.</div>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="quiz-step" data-step-id="q3">
+            <div class="quiz-step-header">
+              <span class="quiz-step-count">Pergunta 3 de 4</span>
+            </div>
+            <h3 class="quiz-question">Existe um contrato de controle integrado de pragas e vetores com empresa licenciada, incluindo laudos e cronograma mensal?</h3>
+            <div class="quiz-options">
+              <label class="quiz-option-card" data-question="q3" data-value="sim">
+                <input type="radio" name="q3" value="sim">
+                <div class="quiz-option-title">Sim</div>
+                <div class="quiz-option-desc">Temos laudo técnico e visitas regulares mensais.</div>
+              </label>
+              <label class="quiz-option-card" data-question="q3" data-value="nao">
+                <input type="radio" name="q3" value="nao">
+                <div class="quiz-option-title">Não / Apenas quando necessário</div>
+                <div class="quiz-option-desc">Fazemos dedetização por conta própria ou de forma esporádica.</div>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Step 4 -->
+          <div class="quiz-step" data-step-id="q4">
+            <div class="quiz-step-header">
+              <span class="quiz-step-count">Pergunta 4 de 4</span>
+            </div>
+            <h3 class="quiz-question">O alvará sanitário, PGRS (quando aplicável) e as licenças sanitárias do local estão em dia perante a Vigilância Sanitária municipal?</h3>
+            <div class="quiz-options">
+              <label class="quiz-option-card" data-question="q4" data-value="sim">
+                <input type="radio" name="q4" value="sim">
+                <div class="quiz-option-title">Sim</div>
+                <div class="quiz-option-desc">Todas as licenças estão válidas e afixadas no local.</div>
+              </label>
+              <label class="quiz-option-card" data-question="q4" data-value="nao">
+                <input type="radio" name="q4" value="nao">
+                <div class="quiz-option-title">Não / Em processo lento</div>
+                <div class="quiz-option-desc">Estamos com licenças vencidas, em exigência ou sem alvará ativo.</div>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Results Screen -->
+          <div id="quiz-results" class="quiz-results">
+            <div class="results-gauge-container">
+              <div class="results-gauge-track"></div>
+              <div id="results-gauge" class="results-gauge-fill"></div>
+              <div id="results-percent" class="results-percentage">0%</div>
+            </div>
+            
+            <div id="results-pill" class="results-risk-pill risk-low">Análise de Risco</div>
+            <h3 id="results-title" class="results-title">Calculando diagnóstico...</h3>
+            <p id="results-desc" class="results-desc">Por favor, responda a todas as perguntas para ver o resultado.</p>
+            
+            <div class="results-cta">
+              <a href="#contato" class="btn btn-primary">Agendar Consultoria de Correção <i data-lucide="calendar"></i></a>
+            </div>
+          </div>
+          
+          <!-- Quiz Navigation -->
+          <div class="quiz-nav-buttons">
+            <button id="quiz-back-btn" class="btn-quiz-back"><i data-lucide="chevron-left" style="vertical-align: middle;"></i> Voltar</button>
+            <button id="quiz-next-btn" class="btn btn-primary" disabled>Próximo <i data-lucide="chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SERVICES SHOWCASE -->
+  <section id="servicos" class="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Nossos Serviços</span>
+        <h2 class="section-title">Soluções completas para a segurança alimentar da sua empresa</h2>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <i data-lucide="clipboard-check" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3 class="service-title">Auditoria de Segurança</h3>
+          <p class="service-desc">Inspeções completas simulando a fiscalização da ANVISA. Mapeamos pontos críticos de controle e apresentamos relatórios detalhados com ações corretivas necessárias.</p>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <i data-lucide="file-text" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3 class="service-title">Regularização Sanitária</h3>
+          <p class="service-desc">Elaboração personalizada de Manual de Boas Práticas, Procedimentos Operacionais Padronizados (POPs) e assessoria no processo de obtenção do Alvará Sanitário.</p>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <i data-lucide="users" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3 class="service-title">Treinamento de Equipe</h3>
+          <p class="service-desc">Capacitação obrigatória para manipuladores de alimentos de acordo com a RDC 216 da ANVISA. Foco em higiene pessoal, contaminação cruzada e armazenamento correto.</p>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <i data-lucide="tag" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3 class="service-title">Rotulagem e Fichas Técnicas</h3>
+          <p class="service-desc">Desenvolvimento de tabelas nutricionais segundo a nova legislação (RDC 429), declaração de alergênicos, padronização de receitas e cálculo de custo operacional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. ABOUT SECTION -->
+  <section id="sobre" class="about">
+    <div class="container about-grid">
+      <div class="about-visual">
+        <div class="about-card">
+          <!-- Logo watermark for visual identity reinforcement -->
+          <img class="about-logo-watermark" src="logo-submarca.svg" alt="SAV Submarca Colorida Watermark">
+        </div>
+      </div>
+      
+      <div class="about-content">
+        <span class="about-badge">Quem Somos</span>
+        <h2 class="about-title">Parceiros dedicados ao sucesso do seu negócio</h2>
+        <p class="about-desc">A SAV Consultoria nasceu com a missão de transformar o mercado de alimentação, desmistificando a legislação sanitária e transformando obrigações em diferenciais competitivos. Nosso foco é proteger a saúde dos seus clientes, a reputação da sua marca e garantir a rentabilidade dos processos.</p>
+        
+        <ul class="about-checklist">
+          <li class="about-checklist-item"><i data-lucide="check-circle-2" class="checklist-icon"></i> Auditoria preventiva</li>
+          <li class="about-checklist-item"><i data-lucide="check-circle-2" class="checklist-icon"></i> Processos enxutos</li>
+          <li class="about-checklist-item"><i data-lucide="check-circle-2" class="checklist-icon"></i> Redução de desperdícios</li>
+          <li class="about-checklist-item"><i data-lucide="check-circle-2" class="checklist-icon"></i> Adequação à ANVISA</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CONTACT SECTION -->
+  <section id="contato" class="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <div>
+          <h2 class="contact-info-title">Fale Conosco</h2>
+          <p class="contact-info-desc">Agende uma reunião inicial gratuita e entenda como podemos estruturar o seu estabelecimento para o crescimento seguro.</p>
+        </div>
+        
+        <div class="contact-methods">
+          <!-- Email -->
+          <div class="contact-method-item">
+            <div class="contact-icon-box">
+              <i data-lucide="mail"></i>
+            </div>
+            <div>
+              <div class="contact-method-title">E-mail</div>
+              <div class="contact-method-value">contato@savconsultoria.com.br</div>
+            </div>
+          </div>
+          
+          <!-- Phone -->
+          <div class="contact-method-item">
+            <div class="contact-icon-box">
+              <i data-lucide="phone"></i>
+            </div>
+            <div>
+              <div class="contact-method-title">Telefone / WhatsApp</div>
+              <div class="contact-method-value">(81) 99876-5432</div>
+            </div>
+          </div>
+          
+          <!-- Location -->
+          <div class="contact-method-item">
+            <div class="contact-icon-box">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <div>
+              <div class="contact-method-title">Atendimento</div>
+              <div class="contact-method-value">Presencial em Recife/PE e região. Online para todo o Brasil.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="contact-form-container">
+        <form id="contact-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Nome Completo</label>
+              <input id="form-name" class="form-input" type="text" placeholder="Seu nome completo" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="form-company" class="form-label">Nome do Estabelecimento</label>
+              <input id="form-company" class="form-input" type="text" placeholder="Ex: Restaurante Sabor Real" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="form-email" class="form-label">E-mail Corporativo</label>
+              <input id="form-email" class="form-input" type="email" placeholder="seuemail@empresa.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="form-phone" class="form-label">WhatsApp de Contato</label>
+              <input id="form-phone" class="form-input" type="tel" placeholder="(00) 00000-0000" required>
+            </div>
+            
+            <div class="form-group form-group-full">
+              <label for="form-msg" class="form-label">Como podemos ajudar seu negócio?</label>
+              <textarea id="form-msg" class="form-input" placeholder="Descreva brevemente suas necessidades (auditoria, POPs, treinamento, etc.)" required></textarea>
+            </div>
+          </div>
+          
+          <button class="btn btn-primary btn-form-submit" type="submit">Solicitar Orçamento de Consultoria</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FOOTER SECTION -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <!-- Relative reference to the monochrome white logo in the footer -->
+        <img class="footer-logo" src="logo-white.svg" alt="SAV Consultoria Logo Branco">
+        
+        <ul class="footer-links">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#diagnostico">Autodiagnóstico</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 SAV Consultoria de Alimentos. Todos os direitos reservados.</div>
+        <div class="footer-credits">Desenvolvido com <i data-lucide="heart" style="width: 14px; height: 14px; color: var(--primary-green); fill: var(--primary-green); vertical-align: middle;"></i> em parceria com <a href="#">Antigravity AI</a>.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Activate Lucide Icons in HTML -->
+  <script>
+    lucide.createIcons();
+  </script>
+  
+  <!-- JavaScript Operations -->
+  <script src="script.js"></script>
+</body>
+</html>
