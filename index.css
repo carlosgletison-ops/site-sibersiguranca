@@ -453,45 +453,18 @@ header.scrolled .brand-logo-img {
   align-items: center;
 }
 
-.hero-card {
-  width: 100%;
-  max-width: 440px;
-  aspect-ratio: 1.2;
-  background: linear-gradient(135deg, rgba(88, 214, 168, 0.08), rgba(242, 186, 49, 0.08));
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.2s ease;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-}
-
-.hero-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2), transparent);
-  pointer-events: none;
-}
-
 .hero-shield-icon {
-  width: 120px;
-  height: 150px;
-  filter: drop-shadow(0 10px 20px rgba(88, 214, 168, 0.25));
+  width: 220px;
+  height: auto;
+  filter: drop-shadow(0 15px 30px rgba(88, 214, 168, 0.3));
   transition: var(--transition-smooth);
-  transform: translateZ(50px);
+  animation: float 6s infinite ease-in-out;
 }
 
-.hero-card:hover .hero-shield-icon {
-  transform: translateZ(70px) scale(1.1);
+.hero-shield-icon:hover {
+  transform: scale(1.08);
 }
+
 
 /* STATS BAR */
 .stats-section {
