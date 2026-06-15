@@ -453,16 +453,36 @@ header.scrolled .brand-logo-img {
   align-items: center;
 }
 
-.hero-shield-icon {
-  width: 220px;
-  height: auto;
-  filter: drop-shadow(0 15px 30px rgba(88, 214, 168, 0.3));
-  transition: var(--transition-smooth);
-  animation: float 6s infinite ease-in-out;
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 1.5; /* Horizontal layout */
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(48, 48, 48, 0.05);
 }
 
-.hero-shield-icon:hover {
-  transform: scale(1.08);
+.hero-team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%; /* Keep their faces nicely framed */
+  transition: var(--transition-smooth);
+}
+
+.hero-team-img:hover {
+  transform: scale(1.05);
+}
+
+.hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  /* Soft fade on left and bottom edges to blend into background */
+  background: linear-gradient(90deg, var(--bg-light) 0%, rgba(250, 249, 246, 0) 15%),
+              linear-gradient(0deg, var(--bg-light) 0%, rgba(250, 249, 246, 0) 10%);
+  pointer-events: none;
 }
 
 
