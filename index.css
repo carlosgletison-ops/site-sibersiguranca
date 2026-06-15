@@ -845,8 +845,8 @@ header.scrolled .brand-logo-img {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 80px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
   align-items: center;
 }
 
@@ -858,8 +858,8 @@ header.scrolled .brand-logo-img {
 
 .about-card {
   width: 100%;
-  max-width: 420px;
-  aspect-ratio: 1;
+  max-width: 540px;
+  aspect-ratio: 1.25;
   background: linear-gradient(135deg, rgba(242, 186, 49, 0.08), rgba(242, 121, 16, 0.08));
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.5);
