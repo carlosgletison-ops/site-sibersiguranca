@@ -392,18 +392,18 @@ header.scrolled .brand-logo-img {
 
 /* HERO SECTION */
 .hero {
-  padding: 240px 0 160px;
+  padding: 220px 0 100px;
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(to right, rgba(250, 249, 246, 0.98) 35%, rgba(250, 249, 246, 0.85) 55%, rgba(250, 249, 246, 0.15) 100%), url('hero-team.jpg');
+  background-image: linear-gradient(rgba(250, 249, 246, 0.96), rgba(250, 249, 246, 0.96)), url('bg-hero.png');
   background-size: cover;
-  background-position: center 25%;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: 60px;
 }
@@ -446,20 +446,42 @@ header.scrolled .brand-logo-img {
   gap: 20px;
 }
 
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.hero-team-img {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: none; /* No shadow wrapper to avoid box/card style */
+  border: none;
+  display: block;
+}
+
 @media (max-width: 1024px) {
   .hero {
-    background-image: linear-gradient(to bottom, rgba(250, 249, 246, 0.97) 45%, rgba(250, 249, 246, 0.8) 75%, rgba(250, 249, 246, 0.25) 100%), url('hero-team.jpg');
-    background-position: center 25%;
-    padding: 180px 0 100px;
+    padding: 180px 0 80px;
   }
   
-  .hero-desc {
-    background: rgba(250, 249, 246, 0.75);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: var(--radius-sm);
-    padding: 16px;
-    border: 1px solid rgba(48, 48, 48, 0.05);
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .hero-visual {
+    order: 2; /* Put image below text on mobile */
+  }
+  
+  .hero-team-img {
+    max-width: 440px;
+    margin: 0 auto;
   }
 }
 
