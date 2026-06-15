@@ -358,5 +358,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1500);
     });
   }
+  // 9. FLOATING WHATSAPP TRIGGER TOGGLE
+  const whatsappContainer = document.getElementById("whatsapp-float");
+  const whatsappTrigger = whatsappContainer ? whatsappContainer.querySelector(".whatsapp-float-trigger") : null;
+  
+  if (whatsappContainer && whatsappTrigger) {
+    whatsappTrigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      whatsappContainer.classList.toggle("active");
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!whatsappContainer.contains(e.target)) {
+        whatsappContainer.classList.remove("active");
+      }
+    });
+  }
 
 });

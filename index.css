@@ -392,12 +392,12 @@ header.scrolled .brand-logo-img {
 
 /* HERO SECTION */
 .hero {
-  padding: 220px 0 100px;
+  padding: 240px 0 160px;
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(rgba(250, 249, 246, 0.94), rgba(250, 249, 246, 0.94)), url('bg-hero.png');
+  background-image: linear-gradient(to right, rgba(250, 249, 246, 0.98) 35%, rgba(250, 249, 246, 0.85) 55%, rgba(250, 249, 246, 0.15) 100%), url('hero-team.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center 25%;
   background-repeat: no-repeat;
 }
 
@@ -446,43 +446,21 @@ header.scrolled .brand-logo-img {
   gap: 20px;
 }
 
-.hero-visual {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 560px;
-  aspect-ratio: 1.5; /* Horizontal layout */
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(48, 48, 48, 0.05);
-}
-
-.hero-team-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 20%; /* Keep their faces nicely framed */
-  transition: var(--transition-smooth);
-}
-
-.hero-team-img:hover {
-  transform: scale(1.05);
-}
-
-.hero-image-overlay {
-  position: absolute;
-  inset: 0;
-  /* Soft fade on left and bottom edges to blend into background */
-  background: linear-gradient(90deg, var(--bg-light) 0%, rgba(250, 249, 246, 0) 15%),
-              linear-gradient(0deg, var(--bg-light) 0%, rgba(250, 249, 246, 0) 10%);
-  pointer-events: none;
+@media (max-width: 1024px) {
+  .hero {
+    background-image: linear-gradient(to bottom, rgba(250, 249, 246, 0.97) 45%, rgba(250, 249, 246, 0.8) 75%, rgba(250, 249, 246, 0.25) 100%), url('hero-team.jpg');
+    background-position: center 25%;
+    padding: 180px 0 100px;
+  }
+  
+  .hero-desc {
+    background: rgba(250, 249, 246, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    border: 1px solid rgba(48, 48, 48, 0.05);
+  }
 }
 
 
@@ -1388,5 +1366,192 @@ footer {
   
   .team-member-specs {
     justify-content: center;
+  }
+}
+
+/* FLOATING WHATSAPP BUTTON & DROPDOWN */
+.whatsapp-float-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  font-family: var(--font-body);
+}
+
+.whatsapp-float-trigger {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366; /* Official WhatsApp green */
+  color: var(--white);
+  border: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.whatsapp-float-trigger:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
+  animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: var(--primary-orange);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.whatsapp-dropdown {
+  position: absolute;
+  bottom: 75px;
+  right: 0;
+  width: 320px;
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  pointer-events: none;
+  transition: var(--transition-smooth);
+  overflow: hidden;
+}
+
+.whatsapp-float-container.active .whatsapp-dropdown {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.whatsapp-dropdown-header {
+  background-color: #25D366;
+  color: var(--white);
+  padding: 20px;
+  text-align: left;
+}
+
+.whatsapp-dropdown-header h4 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: var(--white);
+}
+
+.whatsapp-dropdown-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.whatsapp-dropdown-header h4, .whatsapp-dropdown-header p {
+  margin: 0;
+}
+
+.whatsapp-dropdown-header h4 {
+  margin-bottom: 4px;
+}
+
+.whatsapp-dropdown-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.whatsapp-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--text-primary);
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-light);
+  transition: var(--transition-fast);
+}
+
+.whatsapp-contact-item:hover {
+  background-color: rgba(37, 211, 102, 0.05);
+  border-color: rgba(37, 211, 102, 0.2);
+  transform: translateX(3px);
+}
+
+.whatsapp-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 10%;
+  border: 2px solid var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.whatsapp-contact-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.whatsapp-contact-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.whatsapp-contact-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.whatsapp-arrow {
+  width: 16px;
+  height: 16px;
+  color: var(--text-muted);
+  transition: var(--transition-fast);
+}
+
+.whatsapp-contact-item:hover .whatsapp-arrow {
+  color: #25D366;
+  transform: translateX(2px);
+}
+
+@keyframes pulse-whatsapp {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float-container {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .whatsapp-dropdown {
+    width: 280px;
+    right: 0;
   }
 }
