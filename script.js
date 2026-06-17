@@ -293,15 +293,15 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Adjust visual risk levels based on compliance score
     if (complianceScore === 100) {
-      setRiskUI("risk-low", "Baixo Risco", "#58D6A8", "Excelente! Seu negócio está em plena conformidade com as principais exigências da ANVISA. Mantenha os padrões com auditorias preventivas periódicas.");
+      setRiskUI("risk-low", "Baixo Risco", "#58D6A8", "Excelente! Seu negócio está preparado para crescer com segurança, processos padronizados e desperdício controlado. Mantenha os padrões com auditorias preventivas periódicas.");
     } else if (complianceScore === 75) {
-      setRiskUI("risk-medium", "Médio-Baixo Risco", "#F2BA31", "Bom trabalho! O estabelecimento atende à maioria das normas, mas existem alguns pequenos pontos de atenção na documentação ou processos que necessitam de ajustes para evitar multas.");
+      setRiskUI("risk-medium", "Médio-Baixo Risco", "#F2BA31", "Bom trabalho! O estabelecimento atende à maioria dos requisitos de processos e segurança, mas existem pequenos pontos de desperdício ou falhas na documentação que necessitam de ajustes.");
     } else if (complianceScore === 50) {
-      setRiskUI("risk-medium", "Médio Risco", "#F2BA31", "Atenção! Você atende a metade dos requisitos básicos de higiene e conformidade sanitária. Recomendamos uma consultoria corretiva rápida para evitar autuações da Vigilância Sanitária.");
+      setRiskUI("risk-medium", "Médio Risco", "#F2BA31", "Atenção! Você atende a metade dos requisitos básicos de processos e organização. Recomendamos uma consultoria para identificar gargalos, reduzir desperdícios e padronizar sua operação.");
     } else if (complianceScore === 25) {
-      setRiskUI("risk-high", "Alto Risco", "#F27910", "Alerta! Seu estabelecimento está vulnerável a multas pesadas ou interdições sanitárias devido a falhas graves em processos operacionais e treinamento de manipuladores.");
+      setRiskUI("risk-high", "Alto Risco", "#F27910", "Alerta! Seu estabelecimento está perdendo dinheiro com desperdícios operacionais e falhas de processos, além de estar vulnerável a autuações dos órgãos fiscalizadores.");
     } else {
-      setRiskUI("risk-high", "Risco Crítico", "#F27910", "Perigo Imediato! O estabelecimento falha em todos os controles essenciais de segurança de alimentos. É urgente implantar medidas corretivas imediatas e treinar sua equipe.");
+      setRiskUI("risk-high", "Risco Crítico", "#F27910", "Perigo Imediato! O estabelecimento falha em todos os controles essenciais de processos e desperdícios. É urgente implantar medidas corretivas e treinar sua equipe.");
     }
   }
   
